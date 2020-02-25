@@ -62,3 +62,43 @@
     text-decoration: underline;
     color: rgb(233, 11, 3);
 }
+
+.background-header {
+    background-color: rgb(46, 114, 240);
+    width: 100%;
+}
+
+.search-feature {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.mainmenubtn {
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    z-index: 1000;
+    display: none;
+    background-color: black;
+    min-width: 200px;
+}
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
