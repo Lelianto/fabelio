@@ -1,0 +1,64 @@
+.box-control {
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    -webkit-box-shadow: -1px 2px 7px -2px rgba(201,197,201,1);
+    -moz-box-shadow: -1px 2px 7px -2px rgba(201,197,201,1);
+    box-shadow: -1px 2px 7px -2px rgba(201,197,201,1);
+    margin-bottom: 15px;
+}
+
+.box-control:hover {
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    -webkit-box-shadow: -1px 2px 7px -2px rgba(0,0,0,0.73);
+    -moz-box-shadow: -1px 2px 7px -2px rgba(0,0,0,0.73);
+    box-shadow: -1px 2px 7px -2px rgba(0,0,0,0.73);
+    margin-bottom: 15px;
+}
+
+.product-name {
+    text-align: justify;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.product-price {
+    text-align: right;
+    padding-top: 10px;
+    font-weight: bold;
+    color: orange;
+}
+
+.product-decription {
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.furniture-style {
+    text-align: justify;
+    padding-bottom: 10px;
+    color: rgb(85, 140, 243);
+}
+
+.delivery-time {
+    text-align: right;
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+}
+
+.delivery-time:hover {
+    text-align: right;
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(233, 11, 3);
+}
