@@ -75,6 +75,39 @@
     padding: 10px;
 }
 
+.btn-primary {
+    color: black;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    border-radius: 0px;
+}
+
+.dropdown-menu.show {
+    display: block;
+    width: 100%;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    float: right;
+    margin-top: 10px;
+}
+
+/* .checkbox-control {
+    padding: 0;
+} */
+
+/* 
 .mainmenubtn {
     background-color: white;
     color: black;
@@ -101,4 +134,4 @@
 }
 .dropdown:hover .dropdown-child {
     display: block;
-}
+} */

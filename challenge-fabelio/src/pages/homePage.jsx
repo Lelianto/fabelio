@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'unistore/react';
 import { 
     actions, 
@@ -43,16 +43,47 @@ class Products extends Component {
                         />
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="mainmenubtn">Main menu</button>
-                    <div class="dropdown-child">
-                        <a href="http://wwww.yourdonain.com/page1.html">Child menu 1</a>
-                        <a href="http://wwww.yourdonain.com/page2.html">Child menu 2</a>
-                        <a href="http://wwww.yourdonain.com/page3.html">Child menu 3</a>
-                        <a href="http://wwww.yourdonain.com/page4.html">Child menu 4</a>
-                        <a href="http://wwww.yourdonain.com/page5.html">Child menu 5</a>
+                <div className='row'>
+                    <div className='col-md-6'>               
+                        <div className="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Filter by Style
+                            </button>
+                            { this.props.productList.length !== 0?
+                            <div className="dropdown-menu">
+                                {this.props.productList.furniture_styles.map(( style, index )=>
+                                    <a className="dropdown-item">
+                                        <div className='row'>
+                                            <div className='col-md-11'>
+                                                {style}
+                                            </div>
+                                            <div className='col-md-1 checkbox-control'>
+                                                <div className="checkbox">
+                                                    <label>
+                                                        <input onChange={(e)=>this.props.filterByStyle(e, `${style}`)} type="checkbox"/>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                )}
+                            </div> 
+                            :
+                            null
+                            }
+                        </div>
                     </div>
                 </div>
+                {/* <div class="dropdown">
+                    <button class="mainmenubtn">Main menu</button>
+                    <div class="dropdown-child">
+                        <a href="">Child menu 1</a>
+                        <a href="">Child menu 2</a>
+                        <a href="">Child menu 3</a>
+                        <a href="">Child menu 4</a>
+                        <a href="">Child menu 5</a>
+                    </div>
+                </div> */}
             </div>
             <ProductList/>
         </div>
@@ -60,4 +91,4 @@ class Products extends Component {
     }
 }
 
-export default connect("baseUrl",actions)(withRouter(Products));
+export default connect("baseUrl, productList",actions)(withRouter(Products));
