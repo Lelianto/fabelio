@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'unistore/react';
 import { 
     actions, 
@@ -30,6 +30,7 @@ class Products extends Component {
     };
     
     render() {
+        const deliveryTime = [ '1 week' , '2 weeks' , '1 month', 'more']
         return (
         <div>
             <div className='container-fluid background-header'>
@@ -73,17 +74,36 @@ class Products extends Component {
                             }
                         </div>
                     </div>
-                </div>
-                {/* <div class="dropdown">
-                    <button class="mainmenubtn">Main menu</button>
-                    <div class="dropdown-child">
-                        <a href="">Child menu 1</a>
-                        <a href="">Child menu 2</a>
-                        <a href="">Child menu 3</a>
-                        <a href="">Child menu 4</a>
-                        <a href="">Child menu 5</a>
+                    <div className='col-md-6'>               
+                        <div className="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Filter by Delivery Time
+                            </button>
+                            { this.props.productList.length !== 0?
+                            <div className="dropdown-menu">
+                                {deliveryTime.map(( time, index )=>
+                                    <a className="dropdown-item">
+                                        <div className='row'>
+                                            <div className='col-md-11'>
+                                                {time}
+                                            </div>
+                                            <div className='col-md-1 checkbox-control'>
+                                                <div className="checkbox">
+                                                    <label>
+                                                        <input onChange={(e)=>this.props.filterByTime(e, `${time}`)} type="checkbox"/>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                )}
+                            </div> 
+                            :
+                            null
+                            }
+                        </div>
                     </div>
-                </div> */}
+                </div>
             </div>
             <ProductList/>
         </div>

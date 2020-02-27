@@ -73,6 +73,9 @@
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 10px;
+    background-color: rgb(46, 114, 240);
+    border: 0px;
+    border-bottom: 1px white solid;
 }
 
 .btn-primary {
@@ -102,6 +105,11 @@
     float: right;
     margin-top: 10px;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
 
 /* .checkbox-control {
     padding: 0;
