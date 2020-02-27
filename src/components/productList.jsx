@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/css/main.css';
 import '../styles/css/bootstrap.min.css';
 import { withRouter } from 'react-router-dom';
