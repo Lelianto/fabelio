@@ -10,7 +10,9 @@ import ProductList from '../components/productList';
 import '../styles/css/main.css'
 
 class Products extends Component {
-
+    /**
+     * @function handleAllDatas is a function that handle endpoint for getting the product datas
+     */
     handleAllDatas = async () => {
         const req = {
 			method: 'get',
@@ -37,6 +39,9 @@ class Products extends Component {
         this.handleAllDatas()
     }
 
+    /**
+     * @function handleTimeFilter is a function that handle filtering by delivery time
+     */
     handleTimeFilter = async (e, time) => {
         await this.props.filterByTime(e, time)
         if ( store.getState().searchResult !== null ) {
@@ -46,11 +51,17 @@ class Products extends Component {
         }
     }
 
+    /**
+     * @function handleSeeAllProducts is a function that handle for getting all product datas
+     */
     handleSeeAllProducts = async () => {
         await this.handleAllDatas()
         await this.props.history.push('/')
     }
 
+    /**
+     * @function handleStyleFilter is a function that handle filtering by furniture style
+     */
     handleStyleFilter = async (e, style) => {
         await this.props.filterByStyle(e, style)
         if ( store.getState().searchResult !== null ) {

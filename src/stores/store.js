@@ -1,5 +1,4 @@
 import createStore from 'unistore';
-import axios from 'axios';
 
 const initialState = {
     baseUrl: "http://www.mocky.io/v2/5c9105cb330000112b649af8",
@@ -17,6 +16,10 @@ const initialState = {
 export const store = createStore(initialState);
 
 export const actions = (store) => ({
+    /**
+     * @function searchProduct for handling searching product by brand or product name
+     * @variable e is the keyword given by user
+     */
 	searchProduct: async (state, e) => {
 		const userKeyword = await e.target.value
         await store.setState({ keyword: userKeyword });
@@ -49,7 +52,10 @@ export const actions = (store) => ({
                 }
             }
         }
-
+        /**
+         * @returns uniqueResult is a final result for giving a filtered product
+         * x and y are some index
+         */
         let uniqueResult = []
         if ( result.length !== 0 ) {
             for (let x = 0; x < result.length; x++) {
@@ -79,6 +85,10 @@ export const actions = (store) => ({
         }
     },
     
+    /**
+     * @function filterByStyle is a function for handling filter by style
+     * i, j, k are some index
+     */
     filterByStyle: async (state, e, value) => {
         const userFilterStatus = await e.target.checked
         const userStyle = await value
@@ -101,7 +111,6 @@ export const actions = (store) => ({
         for ( let i = 0; i < state.productList.products.length; i++) {
             for ( let j = 0; j < choosenStyle.length; j++) {
                 for ( let k = 0; k < state.productList.products[i].furniture_style.length; k++) {
-                    console.log()
                     if ( choosenStyle[j].style === state.productList.products[i].furniture_style[k]) {
                         products.push(state.productList.products[i])
                     }
@@ -109,7 +118,6 @@ export const actions = (store) => ({
             }
         }
 
-        console.log('choosen style', products)
         if ( products.length === 0 ) {
             store.setState({
                 searchResult: [],
@@ -121,20 +129,12 @@ export const actions = (store) => ({
                 searching: true
             })
         }
-        // console.log('choosen style', userStyle)
-        // if ( state.choosenStyleFilter.length === 0 ) {
-        //     store.setState({
-        //         searchResult: [],
-        //         searching: true
-        //     })
-        // } else {
-        //     store.setState({
-        //         searchResult: state.choosenStyleFilter,
-        //         searching: true
-        //     })
-        // }
     },
 
+    /**
+     * @function filterByTime is a function for handling filter by delivery time
+     * i is an index
+     */
     filterByTime: async (state, e, value) => {
         const filterResult = []
         if ( value === '1 week' && e.target.checked === true) {
