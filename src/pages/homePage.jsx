@@ -14,9 +14,10 @@ class Products extends Component {
     handleAllDatas = async () => {
         const req = {
 			method: 'get',
-			url: store.getState().baseUrl,
+			url: 'https://cors-anywhere.herokuapp.com/' + store.getState().baseUrl,
 			headers: {
-				"Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "X-Requested-With": "XMLHttpRequest"
 			}
         };
 		await axios(req)
