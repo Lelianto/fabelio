@@ -1,0 +1,145 @@
+.box-control {
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    -webkit-box-shadow: -1px 2px 7px -2px rgba(201,197,201,1);
+    -moz-box-shadow: -1px 2px 7px -2px rgba(201,197,201,1);
+    box-shadow: -1px 2px 7px -2px rgba(201,197,201,1);
+    margin-bottom: 15px;
+}
+
+.box-control:hover {
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    -webkit-box-shadow: -1px 2px 7px -2px rgba(0,0,0,0.73);
+    -moz-box-shadow: -1px 2px 7px -2px rgba(0,0,0,0.73);
+    box-shadow: -1px 2px 7px -2px rgba(0,0,0,0.73);
+    margin-bottom: 15px;
+}
+
+.product-name {
+    text-align: justify;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.product-price {
+    text-align: right;
+    padding-top: 10px;
+    font-weight: bold;
+    color: orange;
+}
+
+.product-decription {
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.furniture-style {
+    text-align: justify;
+    padding-bottom: 10px;
+    color: rgb(85, 140, 243);
+}
+
+.delivery-time {
+    text-align: right;
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+}
+
+.delivery-time:hover {
+    text-align: right;
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(233, 11, 3);
+}
+
+.background-header {
+    background-color: rgb(46, 114, 240);
+    width: 100%;
+}
+
+.search-feature {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(46, 114, 240);
+    border: 0px;
+    border-bottom: 1px white solid;
+}
+
+.btn-primary {
+    color: black;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    border-radius: 0px;
+}
+
+.dropdown-menu.show {
+    display: block;
+    width: 100%;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    float: right;
+    margin-top: 10px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
+/* .checkbox-control {
+    padding: 0;
+} */
+
+/* 
+.mainmenubtn {
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    z-index: 1000;
+    display: none;
+    background-color: black;
+    min-width: 200px;
+}
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+} */
